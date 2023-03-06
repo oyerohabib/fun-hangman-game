@@ -1,9 +1,15 @@
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome to my Fun hangman Game</h1>
-    </div>
-  );
+import React, { Component } from "react";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="container">
+        <div className="title">Hangman Game</div>
+        <div className="figureWrapper"></div>
+        <div className="answerWrapper"></div>
+      </div>
+    );
+  }
 }
 
 export default App;

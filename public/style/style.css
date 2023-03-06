@@ -1,0 +1,31 @@
+body {
+  background: #232222 none repeat scroll 0 0;
+  color: #fefefe;
+  font-family: Verdana;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.container {
+  text-align: center;
+}
+
+.figureWrapper {
+  display: inline-block;
+}
+
+.answerWrapper {
+  display: inline-block;
+  width: 60%;
+}
+
+.title {
+  font-size: 30px;
+  margin: 2em 0;
+}
+
+.info {
+  margin-top: 10px;
+  color: #555;
+}
