@@ -29,3 +29,16 @@ body {
   margin-top: 10px;
   color: #555;
 }
+
+.hangman {
+  height: 350px;
+  margin-top: 20px;
+  position: relative;
+  width: 350px;
+}
+
+.hangman img {
+  position: absolute;
+  left: 0;
+  height: 350px;
+}
