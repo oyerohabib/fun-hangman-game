@@ -42,3 +42,50 @@ body {
   left: 0;
   height: 350px;
 }
+
+.output {
+  background: #fefefe;
+  color: #232222;
+  display: inline-block;
+  padding: 4px 10px;
+}
+
+.answer-box {
+  font-size: 50px;
+  letter-spacing: 20px;
+  margin-top: 30px;
+}
+
+.letters ul {
+  margin: 0 auto;
+  width: 75%;
+  margin-top: 25px;
+  padding: 0;
+}
+
+.letters ul li {
+  background: #fbf9f9;
+  border-radius: 3px;
+  color: #222;
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin: 3px;
+  padding: 8px;
+  width: 30px;
+  transition: background-color ease 0.2s;
+}
+
+.letters ul li:hover {
+  background: #f7de31;
+}
+
+.letters ul .picked {
+  background: #423f40;
+  color: #212121;
+  cursor: default;
+}
+
+.letters ul .picked:hover {
+  background: #423f40;
+}
