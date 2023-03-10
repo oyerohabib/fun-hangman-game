@@ -3,6 +3,8 @@ import Hangman from "./components/Hangman";
 import Answer from "./components/Answer";
 import Letters from "./components/Letters";
 import Output from "./components/Output";
+import Next from "./components/Next";
+import Streak from "./components/Streak";
 import dictionary from "./components/dictionary";
 
 class App extends Component {
@@ -88,6 +90,13 @@ class App extends Component {
             pickedArray={this.state.picked}
             gameStatus={this.state.gameStatus}
             addAlphas={this.addAlphas}
+          />
+
+          <Streak streak={this.state.streak} />
+          <Next
+            gameStatus={this.state.gameStatus}
+            answerList={this.state.answerList}
+            nextWord={this.nextWord}
           />
         </div>
       </div>

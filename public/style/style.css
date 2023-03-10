@@ -89,3 +89,23 @@ body {
 .letters ul .picked:hover {
   background: #423f40;
 }
+
+.nextButton {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 40px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.nextButton:hover {
+  background: #fefefe;
+  color: #222;
+}
+
+.hint,
+.streak {
+  margin-top: 15px;
+}
