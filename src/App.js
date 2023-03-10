@@ -60,6 +60,16 @@ class App extends Component {
       });
     }
   }
+  nextWord() {
+    const answer = this.state.answerList.pop();
+    answer.word = answer.word.toUpperCase();
+    this.setState({
+      picked: [" "],
+      incorrectPicks: 0,
+      answer,
+      gameStatus: 0,
+    });
+  }
   render() {
     return (
       <div className="container">
