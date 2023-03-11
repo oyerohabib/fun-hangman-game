@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Hangman from "./components/Hangman";
+import Hangman from "../src/components/Hangman";
 import Answer from "./components/Answer";
 import Letters from "./components/Letters";
 import Output from "./components/Output";
