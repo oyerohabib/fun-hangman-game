@@ -77,7 +77,7 @@ class App extends Component {
       <div className="container">
         <div className="title">Hangman Game</div>
         <div className="figureWrapper">
-          <Hangman incorrectPicks={6} />
+          <Hangman incorrectPicks={this.state.incorrectPicks} />
         </div>
         <div className="answerWrapper">
           <Output
