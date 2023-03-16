@@ -8,7 +8,7 @@ Welcome to the Hangman Game — a fun and interactive Game built with React!
 | :----------------------------------------------: | :----------------------------------------------: |
 | ![Screenshot 6](https://i.imgur.com/4G8Kv9t.png) | ![Screenshot 5](https://i.imgur.com/Ozazw6H.png) |
 | ![Screenshot 3](https://i.imgur.com/2OXAoR0.png) | ![Screenshot 4](https://i.imgur.com/I0KQE7L.png) |
-| ![Screenshot 2](https://i.imgur.com/4FWoImO.png) | ![Screenshot 1](https://i.imgur.com/S4mL2on.png) |
+| ![Screenshot 2](https://i.imgur.com/4FWoImO.png) | ![Screenshot 1](https://i.imgur.com/qg05xpD.png) |
 
 ## Prerequisites
 
@@ -60,7 +60,7 @@ Enjoy the game and have fun guessing the words! 🎉
 - AI Assistant (to help provide tips or hints for the words)
 - SASS Platform (where the host can uplaod their own dictionary of words)
 
-## Contributing to Hangman Game
+## Contributing to project
 
 Thank you for considering contributing to the Hangman Game! We welcome contributions from the community to help improve and grow the project.
 
