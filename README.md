@@ -4,10 +4,11 @@ Welcome to the Hangman Game — a fun and interactive Game built with React!
 
 ## 📸 Screenshots
 
-| :---------------------------------------: | :---------------------------------------: |
-| ![Imgur](https://i.imgur.com/S4mL2on.png) | ![Imgur](https://i.imgur.com/4FWoImO.png) |
-| ![Imgur](https://i.imgur.com/I0KQE7L.png) | ![Imgur](https://i.imgur.com/2OXAoR0.png) |
-| ![Imgur](https://i.imgur.com/Ozazw6H.png) | ![Imgur](https://i.imgur.com/4G8Kv9t.png) |
+|                                                  |                                                  |
+| :----------------------------------------------: | :----------------------------------------------: |
+| ![Screenshot 6](https://i.imgur.com/4G8Kv9t.png) | ![Screenshot 5](https://i.imgur.com/Ozazw6H.png) |
+| ![Screenshot 3](https://i.imgur.com/2OXAoR0.png) | ![Screenshot 4](https://i.imgur.com/I0KQE7L.png) |
+| ![Screenshot 2](https://i.imgur.com/4FWoImO.png) | ![Screenshot 1](https://i.imgur.com/S4mL2on.png) |
 
 ## Prerequisites
 
