@@ -1,49 +1,216 @@
 const dictionary = [
-  { word: "Machaya", hint: "To do something great" },
-  { word: "Makhaya", hint: "To do a task poorly" },
-  { word: "Insti Top", hint: "Highest point of KGP" },
-  { word: "Gol C", hint: "Here stands BC Roy" },
-  { word: "Bhaat", hint: "A local meetup" },
-  { word: "Maggu", hint: "A special kind of species with just one goal" },
-  { word: "Rassa", hint: "They often conduct strikes in campus :P" },
-  { word: "Matka", hint: "Not a UG, not a scholar" },
-  { word: "Dassi", hint: "Academic gods" },
-  { word: "Peace", hint: "The most famous one" },
-  { word: "Illumination", hint: "Lights." },
-  { word: "Happa", hint: "Hall president" },
-  { word: "Tempo Shout", hint: "We don't scream we have  ____" },
-  { word: "Chaggi", hint: "Probably the most common CG" },
-  { word: "Panji", hint: "He is a dude" },
-  { word: "Faccha", hint: "The noobs of KGP" },
-  { word: "Frustapa", hint: "Anxiety and annoyance for a KGPian" },
-  { word: "Bhajan", hint: "60% of DC searches" },
-  { word: "Funda", hint: "the basic principle behind something" },
-  { word: "Geez", hint: "eating someone's stuff as of its own" },
-  { word: "Load", hint: "To Have Tension" },
-  { word: "Fakka", hint: "An F-grade in any subject" },
-  { word: "Lodu", hint: "A person who takes lot of load" },
-  { word: "Banda", hint: "Any Boy" },
-  { word: "Bhaatu", hint: "A person who is very talkative" },
-  { word: "Archi", hint: "The Architecture Department" },
+  { word: "Algorithm", hint: "Step-by-step procedure to solve a problem" },
   {
-    word: "Taapna",
-    hint: " Copying assignments or examination answer-scripts from any person",
+    word: "Variable",
+    hint: "A storage location identified by a memory address",
   },
-  { word: "Makhana", hint: "To spoil a job" },
+  { word: "Database", hint: "Organized collection of data" },
+  { word: "JavaScript", hint: "High-level programming language" },
+  { word: "Framework", hint: "Reusable set of libraries or tools" },
+  { word: "Encryption", hint: "Process of converting data into a code" },
+  { word: "API", hint: "Application Programming Interface" },
+  { word: "Git", hint: "Version control system for tracking changes" },
+  { word: "Responsive", hint: "Design that adapts to different devices" },
+  { word: "Scalability", hint: "Ability of a system to handle growth" },
   {
-    word: "Stud",
-    hint: "Any student who is good in academics as well as other fields like sports",
+    word: "Container",
+    hint: "Lightweight, executable package that includes everything needed to run a piece of software",
   },
-  { word: "Bandi", hint: "Any girl" },
-  { word: "Batti", hint: "The Electrical Engineering Department" },
-  { word: "Hathora", hint: "The Mechanical Engineering Department" },
-  { word: "Junta", hint: "The human population" },
-  { word: "Chhedis", hint: "A dhaba just outside campus" },
-  { word: "Atthi", hint: "A C.G.P.A. in between 8 and 9" },
-  { word: "Nehli", hint: "A C.G.P.A. greater than 9" },
-  { word: "Panji", hint: "A C.G.P.A. in between 5 and 6" },
-  { word: "Bhaat", hint: "Bekar Chat" },
-  { word: "Ghaasi", hint: "A student of Agriculture Engineering Department" },
+  { word: "DevOps", hint: "Collaboration between development and operations" },
+  {
+    word: "Blockchain",
+    hint: "Distributed and decentralized ledger technology",
+  },
+  {
+    word: "Microservices",
+    hint: "Architectural style that structures an application as a collection of small, independent services",
+  },
+  {
+    word: "Serverless",
+    hint: "Architecture where server management is handled by a cloud provider",
+  },
+  { word: "JavaScript", hint: "Programming language for web development" },
+  {
+    word: "Nodejs",
+    hint: "JavaScript runtime built on Chrome's V8 JavaScript engine",
+  },
+  { word: "React", hint: "JavaScript library for building user interfaces" },
+  { word: "Python", hint: "High-level programming language" },
+  {
+    word: "RESTful",
+    hint: "Representational State Transfer architectural style",
+  },
+  { word: "GraphQL", hint: "Query language for APIs" },
+  {
+    word: "Containerization",
+    hint: "Encapsulation of an application and its dependencies into a container",
+  },
+  { word: "Kubernetes", hint: "Open-source container orchestration platform" },
+  {
+    word: "Blockchain",
+    hint: "Distributed and decentralized ledger technology",
+  },
+  {
+    word: "Decentralized",
+    hint: "Distributed system where no single entity has control",
+  },
+  {
+    word: "Web3",
+    hint: "Next evolution of the internet focused on decentralization",
+  },
+  { word: "Fork", hint: "Personal copy of someone else's project" },
+  {
+    word: "Bug",
+    hint: "Error or flaw in software that produces incorrect or unexpected results",
+  },
+  { word: "Debugging", hint: "Process of finding and fixing bugs in software" },
+  { word: "Lambda", hint: "Anonymous function in programming" },
+  {
+    word: "Repository",
+    hint: "Central location in which data is stored and managed",
+  },
+  {
+    word: "Syntax",
+    hint: "Set of rules for writing programs in a programming language",
+  },
+  { word: "Framework", hint: "Reusable set of libraries or tools" },
+  { word: "HTTP", hint: "Hypertext Transfer Protocol" },
+  { word: "Backend", hint: "Server-side of an application" },
+  { word: "Frontend", hint: "Client-side of an application" },
+  { word: "NPM", hint: "Node Package Manager" },
+  { word: "Webpack", hint: "Open-source JavaScript module bundler" },
+  {
+    word: "Server",
+    hint: "Computer or system that manages network resources and provides services to other computers in the network",
+  },
+  { word: "Azure", hint: "Cloud computing service created by Microsoft" },
+  { word: "AWS", hint: "Amazon Web Services" },
+  { word: "Google Cloud", hint: "Cloud computing services by Google" },
+  {
+    word: "Docker",
+    hint: "Platform for developing, shipping, and running applications in containers",
+  },
+  { word: "GraphQL", hint: "Query language for APIs" },
+  {
+    word: "Linting",
+    hint: "Static code analysis to find problems and ensure consistency in code style",
+  },
+  {
+    word: "WebSocket",
+    hint: "Communication protocol that provides full-duplex communication channels over a single TCP connection",
+  },
+  {
+    word: "JWT",
+    hint: "JSON Web Token - a compact, URL-safe means of representing claims to be transferred between two parties",
+  },
+  { word: "OAuth", hint: "Open standard for access delegation" },
+  {
+    word: "Agile",
+
+    hint: "Project management and product development approach",
+  },
+  {
+    word: "Kanban",
+    hint: "Method for managing knowledge work with an emphasis on just-in-time delivery while not overloading the team members",
+  },
+  { word: "Linux", hint: "Open-source, Unix-like operating system kernel" },
+  {
+    word: "Unix",
+    hint: "Operating system family that includes Linux and macOS",
+  },
+  {
+    word: "Regex",
+    hint: "Sequence of characters that defines a search pattern",
+  },
+
+  {
+    word: "Serverless",
+    hint: "Architecture where server management is handled by a cloud provider",
+  },
+  {
+    word: "Agile",
+    hint: "Project management and product development approach",
+  },
+  {
+    word: "Scrum",
+    hint: "Framework within which people can address complex adaptive problems",
+  },
+  {
+    word: "Kanban",
+    hint: "Method for managing knowledge work with an emphasis on just-in-time delivery while not overloading the team members",
+  },
+  { word: "GraphQL", hint: "Query language for APIs" },
+  {
+    word: "WebAssembly",
+    hint: "Binary instruction format for a stack-based virtual machine",
+  },
+  {
+    word: "CORS",
+    hint: "Cross-Origin Resource Sharing - a security feature implemented by web browsers",
+  },
+  {
+    word: "JWT",
+    hint: "JSON Web Token - a compact, URL-safe means of representing claims to be transferred between two parties",
+  },
+  { word: "OAuth", hint: "Open standard for access delegation" },
+  { word: "GraphQL", hint: "Query language for APIs" },
+  {
+    word: "WebSockets",
+    hint: "Communication protocol that provides full-duplex communication channels over a single TCP connection",
+  },
+
+  {
+    word: "JWT",
+    hint: "JSON Web Token - a compact, URL-safe means of representing claims to be transferred between two parties",
+  },
+  { word: "OAuth", hint: "Open standard for access delegation" },
+  {
+    word: "Agile",
+    hint: "Project management and product development approach",
+  },
+  {
+    word: "Kanban",
+    hint: "Method for managing knowledge work with an emphasis on just-in-time delivery while not overloading the team members",
+  },
+  { word: "Linux", hint: "Open-source, Unix-like operating system kernel" },
+  {
+    word: "Unix",
+    hint: "Operating system family that includes Linux and macOS",
+  },
+  {
+    word: "Regex",
+    hint: "Sequence of characters that defines a search pattern",
+  },
+
+  {
+    word: "Serverless",
+    hint: "Architecture where server management is handled by a cloud provider",
+  },
+
+  {
+    word: "Agile",
+    hint: "Project management and product development approach",
+  },
+  {
+    word: "Scrum",
+    hint: "Framework within which people can address complex adaptive problems",
+  },
+  {
+    word: "Kanban",
+    hint: "Method for managing knowledge work with an emphasis on just-in-time delivery while not overloading the team members",
+  },
+
+  { word: "GraphQL", hint: "Query language for APIs" },
+
+  {
+    word: "WebAssembly",
+    hint: "Binary instruction format for a stack-based virtual machine",
+  },
+
+  {
+    word: "CORS",
+    hint: "Cross-Origin Resource Sharing - a security feature implemented by web browsers",
+  },
 ];
 
 export default dictionary;
