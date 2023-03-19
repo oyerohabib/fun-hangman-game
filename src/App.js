@@ -85,7 +85,9 @@ class App extends Component {
             answer={this.state.answer.word}
           />
           <Answer answer={this.state.answer} pickedArray={this.state.picked} />
-          <div className="info">(All words are from KGP lingo)</div>
+          <div className="info">
+            (Word is related to computer science, mathematics, or web3)
+          </div>
           <Letters
             pickedArray={this.state.picked}
             gameStatus={this.state.gameStatus}
