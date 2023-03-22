@@ -11,7 +11,9 @@ const Answer = (props) => {
 
   return (
     <div>
-      <div className="answer-box">{underscore}</div>
+      <div className="answer-box" data-testid="answer-box">
+        {underscore}
+      </div>
       <div className="hint">{hint}</div>
     </div>
   );
