@@ -1,36 +1,43 @@
 import React, { Component } from "react";
 
-//Import all images
-const images = importAll(
-  require.context("../images", false, /\.(png|jpe?g|svg)$/)
-);
-
-let imgArray = [];
-
 class Hangman extends Component {
-  componentWillMount() {
-    for (let i = 0; i <= 6; i++) {
-      imgArray.push(<img key={i} alt="" src={images[`${i}.png`]} />);
-    }
+  state = {
+    images: [],
+  };
+
+  async componentDidMount() {
+    const images = await this.importAll(
+      require.context("../images", false, /\.(png|jpe?g|svg)$/)
+    );
+    this.setState({ images });
   }
 
+  importAll = async (context) => {
+    const keys = context.keys();
+    return Promise.all(
+      keys.map(async (key) => {
+        const image = new Image();
+        image.src = await context(key);
+        return image;
+      })
+    );
+  };
+
   showHangman() {
-    let output = imgArray.slice(0, this.props.incorrectPicks + 1);
-    return output;
+    const { incorrectPicks } = this.props;
+    const output = this.state.images.slice(0, incorrectPicks + 1);
+    return output.map((image, index) => (
+      <img key={index} alt="" src={image.src} />
+    ));
   }
 
   render() {
-    return <div className="hangman">{this.showHangman()}</div>;
+    return (
+      <div className="hangman" data-testid="hangman">
+        {this.showHangman()}
+      </div>
+    );
   }
 }
 
 export default Hangman;
-
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
-    return null;
-  });
-  return images;
-}
