@@ -13,6 +13,7 @@ Welcome to the Hangman Game — a fun and interactive Game built with React!
 ## Prerequisites
 
 - [NodeJS](https://nodejs.org/en/) version 14+
+- [Docker](https://docs.docker.com/engine/install/ubuntu/) (optional, if you will be running the game with docker)
 
 ## Getting Started
 
@@ -48,9 +49,23 @@ To run the application. Follow the steps below:
    npm run test
    ```
 
+Alternatively, you can run the application using Docker, after step 2 above, run the below commands:
+
+1. Build the Docker Image:
+
+   ```bash
+   docker build -t fun-hangman-game .
+   ```
+
+2. Run the Docker Container:
+
+   ```bash
+   docker run -p 3000:3000 -d fun-hangman-game
+   ```
+
 Now, you should have the project running locally. Visit <http://localhost:3000> in your browser to play the Hangman Game.
 
-Enjoy the game and have fun guessing the words! 🎉
+Enjoy the game using the on-screen instructions and have fun guessing the words! 🎉
 
 ## ⚙️ Upcoming Features/Improvements
 
@@ -65,3 +80,7 @@ Enjoy the game and have fun guessing the words! 🎉
 Thank you for considering contributing to the Hangman Game! We welcome contributions from the community to help improve and grow the project.
 
 Please note that this project adheres to the [Contributor Covenant Code of Conduct](CONTRIBUTING.md). By participating, you are expected to uphold this code. Please report any unacceptable behavior.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
