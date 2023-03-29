@@ -63,6 +63,20 @@ Alternatively, you can run the application using Docker, after step 2 above, run
    docker run -p 3000:3000 -d fun-hangman-game
    ```
 
+Alternatively, you can pull the docker image (from docker hub) and simply run, without having to build or clone it.
+
+1. Pull the Docker Image:
+
+   ```bash
+   docker pull habibo1234/fun-hangman-game:1.0
+   ```
+
+2. Pull the Docker Image:
+
+   ```bash
+   docker run -p 3000:3000 -d habibo1234/fun-hangman-game:1.0
+   ```
+
 Now, you should have the project running locally. Visit <http://localhost:3000> in your browser to play the Hangman Game.
 
 Enjoy the game using the on-screen instructions and have fun guessing the words! 🎉
