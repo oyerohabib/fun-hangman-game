@@ -1,18 +1,21 @@
 import React from "react";
 
-const Answer = (props) => {
-  let answer = props.answer.word;
-  const hint = props.answer.hint;
-  let pick = props.pickedArray;
+const Answer = ({ answer, pickedArray }) => {
+  if (!answer) {
+    // If `answer` is null or undefined, render nothing or a fallback UI
+    return null;
+  }
+  const { word, hint } = answer;
 
-  let guess = pick.join("");
-  let regexp = new RegExp("[^" + guess + "]", "g");
-  let underscore = answer.replace(regexp, "_");
+  // Construct a regex to replace all characters not in the picked array
+  const guess = pickedArray.join("");
+  const regex = new RegExp(`[^${guess}]`, "g");
+  const maskedWord = word.replace(regex, "_");
 
   return (
     <div>
       <div className="answer-box" data-testid="answer-box">
-        {underscore}
+        {maskedWord}
       </div>
       <div className="hint">{hint}</div>
     </div>
