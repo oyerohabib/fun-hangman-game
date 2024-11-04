@@ -1,24 +1,22 @@
-// Letter.jsx
 import React from "react";
 
-const Letter = (props) => {
+const Letter = ({ alpha, gameStatus, pickedArray, addAlphas }) => {
   const handleClick = () => {
-    if (props.gameStatus === 0 && !props.pickedArray.includes(props.alpha)) {
-      props.addAlphas(props.alpha);
+    if (gameStatus === 0 && !pickedArray.includes(alpha)) {
+      addAlphas(alpha);
     }
   };
 
-  if (props.pickedArray.indexOf(props.alpha) > -1 || props.gameStatus > 0) {
-    return (
-      <li className="picked" data-testid={`letter-${props.alpha}`}>
-        {props.alpha}
-      </li>
-    );
-  }
+  // Determine if the letter should appear as picked
+  const isPicked = pickedArray.includes(alpha) || gameStatus > 0;
 
   return (
-    <li onClick={handleClick} data-testid={`letter-${props.alpha}`}>
-      {props.alpha}
+    <li
+      className={isPicked ? "picked" : ""}
+      onClick={!isPicked ? handleClick : null}
+      data-testid={`letter-${alpha}`}
+    >
+      {alpha}
     </li>
   );
 };
