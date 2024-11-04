@@ -1,13 +1,14 @@
 import React from "react";
 
-let output;
-const Output = (props) => {
-  if (!props.gameStatus) output = "The Game is on let's play";
-  if (props.gameStatus === 1) output = "YOU WIN!!";
-  if (props.gameStatus === 2) {
-    output = `YOU LOSE! The word was ${props.answer}`;
-  }
-  return <div className="output">{output}</div>;
+const Output = ({ gameStatus, answer }) => {
+  let message;
+
+  // Determine the message based on gameStatus
+  if (gameStatus === 0) message = "The Game is on let's play";
+  else if (gameStatus === 1) message = "YOU WIN!!";
+  else if (gameStatus === 2) message = `YOU LOSE! The word was ${answer}`;
+
+  return <div className="output">{message}</div>;
 };
 
 export default Output;
