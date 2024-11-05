@@ -1,43 +1,36 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
-class Hangman extends Component {
-  state = {
-    images: [],
-  };
+const Hangman = ({ incorrectPicks }) => {
+  const [images, setImages] = useState([]);
 
-  async componentDidMount() {
-    const images = await this.importAll(
-      require.context("../images", false, /\.(png|jpe?g|svg)$/)
-    );
-    this.setState({ images });
-  }
-
-  importAll = async (context) => {
-    const keys = context.keys();
-    return Promise.all(
-      keys.map(async (key) => {
+  useEffect(() => {
+    const importAll = async (context) => {
+      const keys = context.keys();
+      const imagePromises = keys.map(async (key) => {
         const image = new Image();
         image.src = await context(key);
         return image;
-      })
-    );
-  };
+      });
+      return Promise.all(imagePromises);
+    };
 
-  showHangman() {
-    const { incorrectPicks } = this.props;
-    const output = this.state.images.slice(0, incorrectPicks + 1);
-    return output.map((image, index) => (
-      <img key={index} alt="" src={image.src} />
-    ));
-  }
+    const loadImages = async () => {
+      const loadedImages = await importAll(
+        require.context("../images", false, /\.(png|jpe?g|svg)$/)
+      );
+      setImages(loadedImages);
+    };
 
-  render() {
-    return (
-      <div className="hangman" data-testid="hangman">
-        {this.showHangman()}
-      </div>
-    );
-  }
-}
+    loadImages();
+  }, []);
+
+  return (
+    <div className="hangman" data-testid="hangman">
+      {images.slice(0, incorrectPicks + 1).map((image, index) => (
+        <img key={index} alt="" src={image.src} />
+      ))}
+    </div>
+  );
+};
 
 export default Hangman;
