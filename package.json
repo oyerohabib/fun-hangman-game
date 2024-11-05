@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI= npm run build",
+    "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject"
   },
@@ -35,8 +35,6 @@
   "devDependencies": {
     "@babel/preset-env": "^7.23.6",
     "@babel/preset-react": "^7.23.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.6.4"
   }
