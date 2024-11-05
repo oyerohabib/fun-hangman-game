@@ -1,7 +1,7 @@
 import React from "react";
 
-const Output = (props) => {
-  return <div className="streak">Streak: {props.streak}</div>;
+const Streak = ({ streak }) => {
+  return <div className="streak">Streak: {streak}</div>;
 };
 
-export default Output;
+export default Streak;
