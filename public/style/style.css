@@ -9,6 +9,16 @@ body {
 
 .container {
   text-align: center;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.upload-section {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 5%;
+  text-align: center;
 }
 
 .figureWrapper {
@@ -132,5 +142,13 @@ body {
   }
   .letters ul {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .upload-section {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
   }
 }

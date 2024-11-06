@@ -17,12 +17,49 @@ const App = () => {
 
   // Shuffle dictionary and set initial answer
   useEffect(() => {
-    const shuffledList = [...dictionary].sort(() => Math.random() - 0.5);
+    initializeGame(dictionary);
+  }, []);
+
+  const initializeGame = (dict) => {
+    const shuffledList = [...dict].sort(() => Math.random() - 0.5);
     setAnswerList(shuffledList);
     const firstAnswer = shuffledList.pop();
     firstAnswer.word = firstAnswer.word.toUpperCase();
     setAnswer(firstAnswer);
-  }, []);
+  };
+
+  const handleFileUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const customDictionary = JSON.parse(e.target.result);
+          if (
+            Array.isArray(customDictionary) &&
+            validateDictionary(customDictionary)
+          ) {
+            initializeGame(customDictionary);
+            alert("Custom dictionary uploaded successfully!");
+          } else {
+            alert("Invalid file format. Please upload a valid JSON file.");
+          }
+        } catch (error) {
+          alert("Error reading the file. Please ensure it is a valid JSON.");
+        }
+        event.target.value = "";
+      };
+      reader.readAsText(file);
+    } else {
+      event.target.value = "";
+    }
+  };
+
+  const validateDictionary = (dict) => {
+    return dict.every(
+      (item) => typeof item.word === "string" && typeof item.hint === "string"
+    );
+  };
 
   const addAlphas = useCallback(
     (alpha) => {
@@ -88,6 +125,34 @@ const App = () => {
           answerList={answerList}
           nextWord={nextWord}
         />
+      </div>
+
+      {/* Upload Button UI */}
+      <div className="upload-section">
+        <label htmlFor="dictionary-upload" className="upload-label">
+          Upload Custom Dictionary:
+        </label>{" "}
+        <input
+          id="dictionary-upload"
+          type="file"
+          accept=".json"
+          onChange={handleFileUpload}
+          className="upload-input"
+        />
+        {/* Instruction and download link */}
+        <div className="upload-tip">
+          <p>
+            Tip: Your file should be a JSON format with "word" and "hint"
+            fields.{" "}
+            <a
+              href="data:application/json;charset=utf-8,%5B%7B%22word%22%3A%22React%22%2C%22hint%22%3A%22A%20JavaScript%20library%20for%20building%20user%20interfaces%22%7D%2C%7B%22word%22%3A%22Node%22%2C%22hint%22%3A%22JavaScript%20runtime%20environment%22%7D%5D"
+              download="example-dictionary.json"
+              style={{ color: "white", textDecoration: "underline" }}
+            >
+              Download example file
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );
