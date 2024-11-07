@@ -21,11 +21,22 @@ const App = () => {
   }, []);
 
   const initializeGame = (dict) => {
+    // Reset game state
+    setPicked([" "]);
+    setIncorrectPicks(0);
+    setGameStatus(0);
+    setStreak(0);
+
+    // Shuffle the dictionary
     const shuffledList = [...dict].sort(() => Math.random() - 0.5);
-    setAnswerList(shuffledList);
-    const firstAnswer = shuffledList.pop();
+
+    // Remove the first word for the current answer
+    const firstAnswer = shuffledList.shift(); // Using shift() instead of pop() for consistency
     firstAnswer.word = firstAnswer.word.toUpperCase();
+
+    // Update both the answer and answer list atomically
     setAnswer(firstAnswer);
+    setAnswerList(shuffledList);
   };
 
   const handleFileUpload = (event) => {
@@ -35,6 +46,7 @@ const App = () => {
       reader.onload = (e) => {
         try {
           const customDictionary = JSON.parse(e.target.result);
+          // Validate the uploaded data
           if (
             Array.isArray(customDictionary) &&
             validateDictionary(customDictionary)
@@ -47,10 +59,12 @@ const App = () => {
         } catch (error) {
           alert("Error reading the file. Please ensure it is a valid JSON.");
         }
+        // Clear the input value to allow reupload
         event.target.value = "";
       };
       reader.readAsText(file);
     } else {
+      // Clear the input in case no file was selected
       event.target.value = "";
     }
   };
@@ -91,9 +105,12 @@ const App = () => {
   );
 
   const nextWord = useCallback(() => {
-    if (answerList.length === 0) return; // No more words left
+    if (answerList.length === 0) {
+      alert("No more words in the dictionary, YOU WIN!!!");
+      return;
+    } // No more words left
 
-    const nextAnswer = answerList.pop();
+    const nextAnswer = answerList.shift(); // Changed from pop() to shift() for consistency
     nextAnswer.word = nextAnswer.word.toUpperCase();
     setAnswer(nextAnswer);
     setPicked([" "]);
@@ -127,7 +144,6 @@ const App = () => {
         />
       </div>
 
-      {/* Upload Button UI */}
       <div className="upload-section">
         <label htmlFor="dictionary-upload" className="upload-label">
           Upload Custom Dictionary:
@@ -139,7 +155,6 @@ const App = () => {
           onChange={handleFileUpload}
           className="upload-input"
         />
-        {/* Instruction and download link */}
         <div className="upload-tip">
           <p>
             Tip: Your file should be a JSON format with "word" and "hint"
