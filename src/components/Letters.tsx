@@ -12,7 +12,7 @@ const Letters: React.FC<LettersProps> = ({
   pickedArray,
   addAlphas,
 }) => {
-  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789.-";
   const charArray = characters.split("");
 
   useEffect(() => {
